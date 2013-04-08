@@ -1,0 +1,45 @@
+@import "foundation";
+
+@font-face
+{
+  font-family: Vevey;
+  src: url('vevey.ttf')
+}
+
+body {
+  @include grid-row(collapse);
+}
+
+.selected_movie {
+  @include grid-row(collapse);
+
+  img {
+    position: absolute;
+    top: -9px;
+    bottom: 0px;
+    min-width: 100%;
+    min-height: 100%;
+  }
+
+  h1 {
+    position: absolute; 
+    z-index: 100;
+    text-align: center;
+    width: 100%;
+    font-family: Vevey, Sans-Serif;
+    font-size: 140px;
+    color: white;
+  }
+}
+
+.movie_comparison {
+  @include grid-row(collapse);
+
+  .first_movie {
+
+  }
+
+  .second_movie {
+
+  }
+}

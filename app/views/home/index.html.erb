@@ -1,0 +1,7 @@
+<section class="selected_movie">
+  <h1>Blade runner</h1>
+  <%= image_tag Movie.where(:selected => true).first.backdrop, :class => 'selected_movie' %>
+</section>
+
+<section class="movie_comparison">
+</section>

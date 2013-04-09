@@ -19,7 +19,6 @@ NextHcktrnMovie::Application.configure do
   # Print deprecation notices to the Rails logger.
   config.active_support.deprecation = :log
 
-
   # Debug mode disables concatenation and preprocessing of assets.
   config.assets.debug = true
 end

@@ -1,7 +1,8 @@
 NextHcktrnMovie::Application.routes.draw do
-  resources :movies
-  resources :votes
-
+  resources :movies do
+    resources :votes
+  end
+  
   get 'home/index'
 
   root to: 'home#index'

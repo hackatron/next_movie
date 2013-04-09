@@ -4,6 +4,7 @@ class Movie
   field :movies_io, type: Mashed
   field :selected, type: Boolean, default: false
   field :votes, type: Integer, default: 0
+  has_many :votes
 
   def title=(title)
     self.movies_io = MoviesIo.new(title).movie

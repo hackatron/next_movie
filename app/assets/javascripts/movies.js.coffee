@@ -7,6 +7,6 @@ app.factory "Movie", ($resource) ->
   $scope.movies = Movie.query()
 
   $scope.addMovie = ->
-    movie = Movie.save($scope.newMovie)
+    movie = Movie.save(movie: $scope.newMovie)
     $scope.movies.push(movie)
     $scope.newMovie = {}

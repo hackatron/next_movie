@@ -6,7 +6,7 @@ class Movie
   field :votes, type: Integer, default: 0
 
   def title=(title)
-    self.movies_io = MoviesIo.new(query).movie
+    self.movies_io = MoviesIo.new(title).movie
   end
 
   def backdrop

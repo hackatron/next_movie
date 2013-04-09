@@ -10,10 +10,16 @@ class MoviesController < ApplicationController
   end
 
   def create
-    respond_with Movie.create(params[:movie])
+    respond_with Movie.create(movie_params)
   end
 
   def update
-    respond_with Movie.update(params[:movie])
+    respond_with Movie.update(movie_params)
+  end
+
+  private
+
+  def movie_params
+    params.require(:movie).permit(:title)
   end
 end

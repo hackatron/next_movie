@@ -5,7 +5,7 @@ class Movie
   field :selected, type: Boolean, default: false
   field :votes, type: Integer, default: 0
 
-  def search(query)
+  def title=(title)
     self.movies_io = MoviesIo.new(query).movie
   end
 

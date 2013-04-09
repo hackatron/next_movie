@@ -1,17 +1,19 @@
 class MoviesController < ApplicationController
-  def show
-    @movie = Movie.find(params[:id])
+  respond_to :json
 
-    respond_to do |format|
-      format.json { render json: @movie }
-    end
+  def show
+    respond_with Movie.find(params[:id])
   end
 
   def index
-    @movies = Movie.all
-    
-    respond_to do |format|
-      format.json { render json: @movies }
-    end
+   respond_with Movie.all
+  end
+
+  def create
+    respond_with Movie.create(params[:movie])
+  end
+
+  def update
+    respond_with Movie.update(params[:movie])
   end
 end

@@ -4,8 +4,6 @@ gem 'rails', '4.0.0.beta1'
 gem 'mongoid', :git => 'git://github.com/mongoid/mongoid.git'
 gem 'jquery-rails'
 gem 'jbuilder', '~> 1.0.1'
-gem 'httparty'
-gem 'hashie'
 gem 'active_model_serializers'
 
 group :assets do
@@ -13,5 +11,4 @@ group :assets do
   gem 'coffee-rails', '~> 4.0.0.beta1'
   gem 'zurb-foundation'
   gem 'uglifier', '>= 1.0.3'
-  gem 'angularjs-rails-resource'
 end

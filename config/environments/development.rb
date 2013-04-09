@@ -19,6 +19,8 @@ NextHcktrnMovie::Application.configure do
   # Print deprecation notices to the Rails logger.
   config.active_support.deprecation = :log
 
+  config.assets.js_compressor = Uglifier.new(mangle: false) if defined? Uglifier
+
   # Debug mode disables concatenation and preprocessing of assets.
   config.assets.debug = true
 end

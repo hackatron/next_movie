@@ -6,6 +6,7 @@ gem 'jquery-rails'
 gem 'jbuilder', '~> 1.0.1'
 gem 'httparty'
 gem 'hashie'
+gem 'active_model_serializers'
 
 group :assets do
   gem 'sass-rails',   '~> 4.0.0.beta1'

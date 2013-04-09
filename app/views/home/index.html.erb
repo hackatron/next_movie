@@ -1,7 +1,25 @@
 <section class="selected_movie">
   <h1>Blade runner</h1>
-  <%= image_tag Movie.where(:selected => true).first.backdrop, :class => 'selected_movie' %>
 </section>
 
 <section class="movie_comparison">
+  <div ng-controller="MoviesCtrl">
+    <form ng-submit="addMovie()" class="row collapse">
+      <div class="small-10 columns">
+        <input type="text" placeholder="Movie Title" ng-model="newMovie.title">
+      </div>
+
+      <div class="small-2 columns">
+        <input type="submit" value="Add" class="button prefix">
+      </div>
+    </form>
+
+    <ul>
+      <li ng-repeat="movie in movies">
+        {{ movie.title }}
+        <span class="votes">{{ movie.votes }} Votes</span>
+        <button ng-click="movie.vote()" class="small">Vote</button>
+      </li>
+    </ul>
+  </div>
 </section>

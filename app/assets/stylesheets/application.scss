@@ -1,45 +1,28 @@
 @import "foundation";
 
-@font-face
-{
-  font-family: Vevey;
-  src: url('vevey.ttf')
-}
+$row-width: 100%;
 
 body {
-  @include grid-row(collapse);
+  @include grid-row;
 }
 
 .selected_movie {
-  @include grid-row(collapse);
-
-  img {
-    position: absolute;
-    top: -9px;
-    bottom: 0px;
-    min-width: 100%;
-    min-height: 100%;
-  }
-
-  h1 {
-    position: absolute; 
-    z-index: 100;
-    text-align: center;
-    width: 100%;
-    font-family: Vevey, Sans-Serif;
-    font-size: 140px;
-    color: white;
-  }
+  @include grid-column(12);
 }
 
 .movie_comparison {
-  @include grid-row(collapse);
+  @include grid-column(5, $center: true);
+}
 
-  .first_movie {
+h1 {
+  width: 100%;
+  text-align: center;
+}
 
-  }
+input[type=submit] {
+  width: 100%;
+}
 
-  .second_movie {
-
-  }
+ul {
+  list-style-type: none;
 }

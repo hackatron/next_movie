@@ -3,9 +3,10 @@ class Movie
 
   field :movies_io, type: Mashed
   field :selected, type: Boolean, default: false
+  field :votes, type: Integer, default: 0
 
-  def initialize(query)
-    super(movies_io: MoviesIo.new(query).movie)
+  def search(query)
+    self.movies_io = MoviesIo.new(query).movie
   end
 
   def backdrop

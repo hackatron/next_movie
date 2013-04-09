@@ -1,17 +1,31 @@
 <!DOCTYPE html>
-<html ng-app="NextHcktrnMovie">
-<head>
-  <title>NextHcktrnMovie</title>
-  <%= stylesheet_link_tag    "application", media: "all" %>
-  <%= javascript_include_tag "application" %>
-  <%= csrf_meta_tags %>
+<html ng-app="NextMovie">
+  <head>
+    <title>NextHcktrnMovie</title>
+    <%= stylesheet_link_tag    "application", media: "all" %>
+    <%= javascript_include_tag "application" %>
+    <%= csrf_meta_tags %>
 
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <%= javascript_include_tag "vendor/custom.modernizr" %>
-</head>
-<body>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  </head>
+  <body>
+    <nav class="top-bar">
+      <ul class="title-area">
+        <li class="name">
+          <h1><a href="#">Next HCKTRN Movie</a></h1>
+        </li>
 
-<%= yield %>
+        <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
+      </ul>
 
-</body>
+      <section class="top-bar-section">
+        <ul class="right">
+          <li class="divider hide-for-small"></li>
+          <li><a href="#">Login</a></li>
+        </ul>
+      </section>
+    </nav>
+
+    <%= yield %>
+  </body>
 </html>

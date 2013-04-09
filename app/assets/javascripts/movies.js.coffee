@@ -1,3 +1,12 @@
-# Place all the behaviors and hooks related to the matching controller here.
-# All this logic will automatically be available in application.js.
-# You can use CoffeeScript in this file: http://coffeescript.org/
+app = angular.module("NextMovie", ["ngResource"])
+
+app.factory "Movie", ($resource) ->
+  $resource("/movies/:id", { id: "@id" }, { update: { method: "PATCH" } })
+
+@MoviesCtrl = ($scope, Movie) ->
+  $scope.movies = Movie.query()
+
+  $scope.addMovie = ->
+    movie = Movie.save($scope.newMovie)
+    $scope.movies.push(movie)
+    $scope.newMovie = {}

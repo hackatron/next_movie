@@ -4,7 +4,6 @@ source 'http://rubygems.org'
 gem 'rails', '4.0.0.beta1'
 gem 'mongoid', :git => 'git://github.com/mongoid/mongoid.git'
 gem 'jquery-rails'
-gem 'jbuilder', '~> 1.0.1'
 gem 'active_model_serializers'
 
 group :assets do

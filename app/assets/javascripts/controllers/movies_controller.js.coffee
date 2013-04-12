@@ -1,4 +1,7 @@
 NextMovie.MoviesController = Ember.ArrayController.extend
+  sortProperties: ['rating']
+  sortAscending: false
+
   add: (title) ->
     NextMovie.Movie.createRecord(title: title)
     this.get('store').commit()

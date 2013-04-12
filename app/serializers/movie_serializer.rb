@@ -1,5 +1,5 @@
 class MovieSerializer < ActiveModel::Serializer
-  attributes :title, :rating
+  attributes :id, :title, :rating
 
   def rating
     try(:votes_count) || 0

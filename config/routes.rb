@@ -1,7 +1,6 @@
 NextMovie::Application.routes.draw do
-  resources :movies do
-    resources :votes
-  end
+  resources :movies
+  resources :votes
 
   get 'home/index'
 

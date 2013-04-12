@@ -4,6 +4,6 @@ NextMovie.NewMovieView = Ember.View.extend
   classNames: 'row collapse'
 
   submit: ->
-    this.get('controller').send('addMovie', @get('newMovieTitle'))
+    this.get('controller').send('add', this.get('newMovieTitle'))
     this.set('newMovieTitle', '')
     false

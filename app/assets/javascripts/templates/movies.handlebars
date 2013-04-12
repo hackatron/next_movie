@@ -1,0 +1,15 @@
+<section class="selected_movie">
+  <h1>Blade runner</h1>
+</section>
+
+<section class="movie_comparison">
+  {{view NextMovie.NewMovieView}}
+
+  <ul>
+    {{#each controller}}
+      <li>
+        {{title}}
+      </li>
+    {{/each}}
+  </ul>
+</section>

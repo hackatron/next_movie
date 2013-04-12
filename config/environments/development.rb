@@ -1,4 +1,4 @@
-NextHcktrnMovie::Application.configure do
+NextMovie::Application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
 
   # In the development environment your application's code is reloaded on
@@ -21,4 +21,6 @@ NextHcktrnMovie::Application.configure do
 
   # Debug mode disables concatenation and preprocessing of assets.
   config.assets.debug = true
+
+  config.ember.variant = :development
 end

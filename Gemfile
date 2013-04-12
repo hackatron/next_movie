@@ -1,10 +1,12 @@
 ruby '2.0.0'
-source 'http://rubygems.org'
+source 'https://rubygems.org'
 
 gem 'rails', '4.0.0.beta1'
-gem 'mongoid', :git => 'git://github.com/mongoid/mongoid.git'
+gem 'mongoid', git: 'git://github.com/mongoid/mongoid.git'
 gem 'jquery-rails'
 gem 'active_model_serializers'
+gem 'ember-rails', git: 'git://github.com/emberjs/ember-rails.git'
+gem 'handlebars-source', '1.0.0.rc3'
 
 group :assets do
   gem 'sass-rails',   '~> 4.0.0.beta1'

@@ -3,4 +3,4 @@
 
 require File.expand_path('../config/application', __FILE__)
 
-NextHcktrnMovie::Application.load_tasks
+NextMovie::Application.load_tasks

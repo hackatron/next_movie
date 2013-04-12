@@ -4,6 +4,6 @@ NextMovie.MoviesController = Ember.ArrayController.extend
     this.get('store').commit()
 
   vote: (id) ->
-    alert(id)
-    NextMovie.Vote.createRecord(movie_id: id)
+    vote = NextMovie.Vote.createRecord()
+    vote.set('movie', NextMovie.Movie.find(id))
     this.get('store').commit()

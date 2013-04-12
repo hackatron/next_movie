@@ -4,6 +4,6 @@ class VotesController < ApplicationController
   def create
     movie = Movie.find(params[:vote][:movie_id])
 
-    respond_with @movie.votes.create
+    respond_with movie.votes.create
   end
 end

@@ -8,8 +8,8 @@ require "sprockets/railtie"
 require "rails/test_unit/railtie"
 
 # Assets should be precompiled for production (so we don't need the gems loaded then)
-# Bundler.require(*Rails.groups(assets: %w(development test)))
-Bundler.require(:default, :assets, Rails.env)
+Bundler.require(*Rails.groups(assets: %w(development test)))
+# Bundler.require(:default, :assets, Rails.env)
 
 module NextMovie
   class Application < Rails::Application
